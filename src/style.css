@@ -1,0 +1,51 @@
+body {
+    background-color: brown;
+}
+
+.nav {
+    display: flex;
+    position: absolute;
+    top: 0;
+    z-index: 15;
+}
+
+.toggle-button {
+    margin: 1.125em;
+    width: 3.25em;
+    position: absolute;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.toggle-button:hover {
+    cursor: pointer;
+    opacity: 0.45;
+}
+
+.toggle-button ul.menu {
+    width: 1.625em;
+    height: 1.625em;
+    list-style: none;
+    margin: -0.8125em 0 0 -0.8125em;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transition: transform 1s cubic-bezier(0.23, 1, 0.320, 1), color 1s cubic-bezier(0.23, 1, 0.320, 1);
+    transform: translateZ(0);
+    color: white;
+}
+
+.toggle-button ul.menu li.menu-options {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.75px;
+    transform: translateY(-3.75px) translateZ(0);
+    transition: transform 1s cubic-bezier(0.23, 1, 0.320, 1), background-color 1s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.toggle-button ul.menu li.menu-options:last-child {
+    transform: translateY(3.75px) translateZ(0);
+}
