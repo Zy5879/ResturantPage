@@ -1,1 +1,1 @@
-console.log("LETS GET IT!");
+(()=>{"use strict";document.getElementById("content").append(function(){const e=document.createElement("div");return e.innerHTML="SeaMonsters SeaFood Shop",e}(),function(){const e=document.createElement("a"),t=document.createElement("ul"),n=document.createElement("li"),c=document.createElement("li");return t.append(n,c),e.appendChild(t),e}())})();
