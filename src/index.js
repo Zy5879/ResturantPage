@@ -1,4 +1,5 @@
-import { createNav, createUl } from "./modules/home";
+import { createNav } from "./modules/home";
+import './style.css';
 
 const content = document.getElementById('content');
-content.append(createNav(),createUl());
+content.appendChild(createNav());
