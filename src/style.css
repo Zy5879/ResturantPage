@@ -1,18 +1,54 @@
-body {
-    background-color: brown;
+  body {
+    /* height: 100vh;
+    width: 100%;
+    background-image: url('./Seafood.jpeg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%; */
+    /* line-height: 1.6; */
+
+
+}  
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* #content {
+    height: 100vh;
+    width: 100%;
+    background-image: url('./Seafood.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+.bg-img {
+    /* background-image: url('./Seafood.jpeg') ; */
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
 }
 
 .nav {
-    display: flex;
+    /* display: flex;
+    justify-content: space-between; */
     position: absolute;
     top: 0;
     z-index: 15;
+    background-color: brown;
+}
+
+.color-TBA {
+    font-size: 1.5rem;
 }
 
 .toggle-button {
     margin: 1.125em;
     width: 3.25em;
-    position: absolute;
+    /* position: absolute; */
     display: block;
     transition: all 0.5s ease;
 }
@@ -48,4 +84,34 @@ body {
 
 .toggle-button ul.menu li.menu-options:last-child {
     transform: translateY(3.75px) translateZ(0);
+}
+
+.toggled .toggle-button ul.menu li.menu-options {
+    transform: rotate(45deg) translateZ(0);
+}
+
+.toggled .toggle-button ul.menu li.menu-options:last-child {
+    transform: rotate(-45deg) translateZ(0);
+}
+
+nav.main-nav{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    opacity: 0;
+    transform: scale(0.85);
+    transition: all 0.5s ease;
+    color: black;
+}
+
+.toggled nav.main-nav {
+    display: block;
+    z-index: 10;
+    /* transform: scale(1); */
+    opacity: 1;
+    transition: all 0.5s ease;
 }
