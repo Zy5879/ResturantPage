@@ -1,4 +1,4 @@
-  body {
+   /* body { */
     /* height: 100vh;
     width: 100%;
     background-image: url('./Seafood.jpeg');
@@ -9,23 +9,23 @@
     /* line-height: 1.6; */
 
 
-}  
+/* }   */
 
-* {
+/* * {
     margin: 0;
     padding: 0;
 }
 
-/* #content {
+#content {
     height: 100vh;
     width: 100%;
     background-image: url('./Seafood.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
-} */
+}
 
 .bg-img {
-    /* background-image: url('./Seafood.jpeg') ; */
+    background-image: url('./Seafood.jpeg') ;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -33,8 +33,8 @@
 }
 
 .nav {
-    /* display: flex;
-    justify-content: space-between; */
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     top: 0;
     z-index: 15;
@@ -48,7 +48,7 @@
 .toggle-button {
     margin: 1.125em;
     width: 3.25em;
-    /* position: absolute; */
+    position: absolute;
     display: block;
     transition: all 0.5s ease;
 }
@@ -111,7 +111,135 @@ nav.main-nav{
 .toggled nav.main-nav {
     display: block;
     z-index: 10;
-    /* transform: scale(1); */
+    transform: scale(1);
     opacity: 1;
     transition: all 0.5s ease;
+}  */
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    z-index: 15;
+}
+
+
+.toggle-button {
+    margin: 1.125em;
+    width: 3.25em;
+    position: absolute;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.toggle-button:hover {
+    cursor: pointer;
+    opacity: 0.45;
+}
+
+.toggle-button ul.menu {
+    width: 1.625em;
+    height: 1.625em;
+    list-style: none;
+    margin: -0.8125em 0 0 -0.8125em;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transition: transform 1s cubic-bezier(0.23, 1, 0.320, 1), color 1s cubic-bezier(0.23, 1, 0.320, 1);
+    transform: translateZ(0);
+    color: black;
+}
+
+.toggle-button ul.menu li.menu-options {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.75px;
+    transform: translateY(-3.75px) translateZ(0);
+    transition: transform 1s cubic-bezier(0.23, 1, 0.320, 1), background-color 1s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.toggle-button ul.menu li.menu-options:last-child {
+    transform: translateY(3.75px) translateZ(0);
+}
+
+.toggled .toggle-button ul.menu li.menu-options {
+    transform: rotate(45deg) translateZ(0);
+}
+
+.toggled .toggle-button ul.menu li.menu-options:last-child {
+    transform: rotate(-45deg) translateZ(0);
+}
+
+nav.main-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    opacity: 0;
+    transform: scale(0.85);
+    transition: all 0.5s ease;
+}
+
+nav.main-nav ul {
+    padding: 2em 0 0 0;
+}
+
+nav.main-nav ul li {
+    border-bottom: 1px solid black;
+    list-style: none;
+}
+
+nav.main-nav ul li a {
+    font-size: 2rem;
+    color: black;
+    padding: 1em 0;
+    font-weight: 300;
+    display: block;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+nav.main-nav ul li a:last-child {
+    border: none;
+}
+
+nav.main-nav ul li a:hover {
+    opacity: 0.45;
+    transform: all 0.5s ease;
+    padding: 1em;
+}
+
+.toggled nav.main-nav {
+    display: block;
+    z-index: 10;
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.bg {
+    width: 100%;
+    min-height: 100vh;
+    background: url('./Seafood.jpeg');
+    background-size: cover;
+}
+
+#content {
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.toggled #content{
+    filter: blur(4px);
+    transition: all 0.5s ease; 
 }
