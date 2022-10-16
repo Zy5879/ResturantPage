@@ -1,6 +1,7 @@
-import { createNav, createImg, catchToggle, navOptions} from "./modules/home";
-import './style.css';
+import {head, readToggle, createNav, backGround} from './modules/load'
+import './style.css'
 
-const content = document.getElementById('content');
-content.append(createNav(), createImg(),navOptions())
-catchToggle();
+head()
+readToggle()
+createNav()
+backGround()
