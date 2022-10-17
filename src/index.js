@@ -7,8 +7,9 @@
 // backGround()
 // createTitle()
 
-import navHeader from './modules/load'
+import {navHeader, mainBody, footer} from './modules/load'
 import './style.css'
 
 navHeader()
-
+mainBody()
+footer()

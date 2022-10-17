@@ -91,9 +91,13 @@ function navHeader() {
     const navRight = document.createElement('div')
     navRight.classList.add('right-header')
     const navul = document.createElement('ul')
-    const listArray = ['Home','Menu','About','Contact']
+    navul.classList.add('toggle-button')
+    const listArray = ['Home','Menu','Contact']
     listArray.forEach(function(item) {
         const navli = document.createElement('li')
+        // const navli2 = document.createElement('li')
+        navli.classList.add('toggle-options')
+        // navli2.classList.add('toggle-options')
         const navspan = document.createElement('span')
         const text = document.createTextNode(item)
         navli.append(navspan,text);
@@ -106,4 +110,26 @@ function navHeader() {
     content.appendChild(nav)
 }
 
-export default navHeader
+function mainBody() {
+    const main = document.createElement('main')
+    main.classList.add('main-img')
+    const overlay = document.createElement('div')
+    overlay.classList.add('overlay')
+    const overh1 = document.createElement('h1')
+    overh1.innerHTML = 'ABOUT US'
+    const overp = document.createElement('p')
+    // overp.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque adipisci quisquam doloremque! Non, quasi excepturi magni saepe neque placeat cum delectus doloribus at vel quas atque ea ad, tempore consequatur beatae laborum. Accusantium mollitia culpa nam illo necessitatibus. Numquam et iste eaque quos minima quod excepturi ex ea nobis culpa! Odio omnis quo facere architecto, ipsam dicta quos voluptatibus deleniti.'
+    overlay.appendChild(overh1,)
+    main.appendChild(overlay)
+    content.appendChild(main);
+}
+
+function footer() {
+    const foot = document.createElement('footer')
+    const footp = document.createElement('p')
+    footp.innerHTML = 'Created By Me'
+    foot.appendChild(footp)
+    content.appendChild(foot)
+}
+
+export {navHeader, mainBody, footer}
