@@ -113,13 +113,16 @@ function navHeader() {
 function mainBody() {
     const main = document.createElement('main')
     main.classList.add('main-img')
+    const mainBody = document.createElement('div')
+    mainBody.classList.add('main-body')
     const overlay = document.createElement('div')
     overlay.classList.add('overlay')
     const overh1 = document.createElement('h1')
     overh1.innerHTML = 'ABOUT US'
     const overp = document.createElement('p')
-    // overp.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque adipisci quisquam doloremque! Non, quasi excepturi magni saepe neque placeat cum delectus doloribus at vel quas atque ea ad, tempore consequatur beatae laborum. Accusantium mollitia culpa nam illo necessitatibus. Numquam et iste eaque quos minima quod excepturi ex ea nobis culpa! Odio omnis quo facere architecto, ipsam dicta quos voluptatibus deleniti.'
-    overlay.appendChild(overh1,)
+    overp.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque adipisci quisquam doloremque! Non, quasi excepturi magni saepe neque placeat cum delectus doloribus at vel quas atque ea ad, tempore consequatur beatae laborum. Accusantium mollitia culpa nam illo necessitatibus. Numquam et iste eaque quos minima quod excepturi ex ea nobis culpa! Odio omnis quo facere architecto, ipsam dicta quos voluptatibus deleniti.'
+    mainBody.append(overh1, overp)
+    overlay.appendChild(mainBody)
     main.appendChild(overlay)
     content.appendChild(main);
 }
