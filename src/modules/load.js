@@ -90,24 +90,28 @@ function navHeader() {
 
     const navRight = document.createElement('div')
     navRight.classList.add('right-header')
+    const nava = document.createElement('a')
+    nava.classList.add('toggle-button')
     const navul = document.createElement('ul')
-    navul.classList.add('toggle-button')
-    const listArray = ['Home','Menu','Contact']
-    listArray.forEach(function(item) {
+    navul.classList.add('buns')
+    // const listArray = ['Home','Menu','Contact']
+    // listArray.forEach(function(item) {
         const navli = document.createElement('li')
-        // const navli2 = document.createElement('li')
-        navli.classList.add('toggle-options')
+        const navli2 = document.createElement('li')
+        navli.classList.add('bun')
+        navli2.classList.add('bun') 
+        navul.append(navli,navli2)
         // navli2.classList.add('toggle-options')
-        const navspan = document.createElement('span')
-        const text = document.createTextNode(item)
-        navli.append(navspan,text);
-        navul.appendChild(navli)
-    })
+        // const navspan = document.createElement('span')
+        // const text = document.createTextNode(item)
+        nava.appendChild(navul)
+    // })
 
-    navRight.appendChild(navul)
+    navRight.appendChild(nava)
 
-    nav.append(navLeft, navRight)
+    nav.appendChild(navLeft)
     content.appendChild(nav)
+    document.body.appendChild(navRight)
 }
 
 function mainBody() {
@@ -135,4 +139,32 @@ function footer() {
     content.appendChild(foot)
 }
 
-export {navHeader, mainBody, footer}
+function clickToggle() {
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelector('.toggle-button').addEventListener('click', () => {
+            document.querySelector('body').classList.toggle('toggled');
+            console.log('Click')
+        })
+    })
+}
+
+function menuNav() {
+    const menuNav = document.createElement('nav');
+    menuNav.classList.add('menu-nav')
+    const menul = document.createElement('ul')
+    const listArray = ['Home','Menu','Contact']
+    listArray.forEach(function(item) {
+        const menuli = document.createElement('li')
+      const menua = document.createElement('a')
+      menua.href =" "
+      const menuspan = document.createElement('span')
+      const text = document.createTextNode(item)
+      menua.append(menuspan,text)
+      menuli.appendChild(menua)
+      menul.appendChild(menuli)
+    })
+    menuNav.appendChild(menul)
+    document.body.appendChild(menuNav)
+}
+
+export {navHeader, mainBody, footer, clickToggle, menuNav}
