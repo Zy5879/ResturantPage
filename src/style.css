@@ -22,7 +22,7 @@ body {
 
 
  .logo {
-    background: url('./crab.svg');
+    background-image: url('https://images.unsplash.com/photo-1610294242471-9d44491f73fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80');
     height: 20px;
     width: 20px;
  }
@@ -144,7 +144,7 @@ body {
  }
 
  .toggled #content {
-    filter: blur(8px);
+    filter: blur(6px);
     transition: all 0.5s ease;
  }
 
@@ -178,7 +178,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* padding: 1rem; */
  }
 
  footer {
