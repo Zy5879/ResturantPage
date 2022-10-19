@@ -165,13 +165,13 @@ function funcFooter() {
 function loadPage() {
     funcheader()
     funcNav()
-    // funcMain()
+    funcMain()
     funcFooter()
 }
 
 loadPage()
 
-export {
-    funcMain
-}
+// export {
+//     funcMain
+// }
 
