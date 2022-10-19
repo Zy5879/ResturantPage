@@ -114,7 +114,7 @@
 // export {navHeader, mainBody, footer, clickToggle, menuNav}
 
 const content = document.getElementById('content')
-const main = document.querySelector('.main-body')
+const main = document.getElementById('main-body')
 
 function funcheader() {
     const header = document.createElement('header')
@@ -142,7 +142,8 @@ function funcNav() {
 
 function funcMain() {
     const main = document.createElement('main')
-    main.classList.add('main-body')
+    // main.classList.add('main-body')
+    main.id = 'main-body'
     const mainh1 = document.createElement('h2')
     mainh1.classList.add('about')
     mainh1.textContent = 'ABOUT'

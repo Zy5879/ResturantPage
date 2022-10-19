@@ -1,4 +1,6 @@
-const main = document.querySelector('.main-body')
+// const main = document.querySelector('.main-body')
+
+const main = document.getElementById('main-body')
 
 function funcNewMain() {
     const mainh1 = document.createElement('h2')
@@ -11,7 +13,7 @@ function funcNewMain() {
 }
 
 const homeBtn = document.querySelector('.home').addEventListener('click', () => {
-    const homecontent = document.querySelector('.main-body')
+    const homecontent = document.getElementById('main-body')
     while(homecontent.firstChild) {
         homecontent.removeChild(homecontent.firstChild);
     }

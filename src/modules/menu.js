@@ -43,7 +43,9 @@
 //     createMenu
 // }
 
-const main = document.querySelector('.main-body');
+// const main = document.querySelector('.main-body');
+
+const main = document.getElementById('main-body')
 
 function newMenu () {
     const menupage = document.createElement('div')
@@ -60,12 +62,23 @@ function newMenu () {
     menuitem3.classList.add('item3img')
     menuitem3.src = "https://images.unsplash.com/photo-1636401870585-a8852371e84a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
 
-    menupage.append(menuitem1,menuitem2,menuitem3)
+    const menuitem4 = document.createElement('img')
+    menuitem4.src = 'https://images.unsplash.com/photo-1550586554-a5a846e56593?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80'
+
+    const menuitem5 = document.createElement('img')
+    menuitem5.src ='https://images.unsplash.com/photo-1625943555419-56a2cb596640?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1760&q=80'
+
+    const menuitem6 = document.createElement('img')
+    menuitem6.src = 'https://images.unsplash.com/photo-1583623025817-d180a2221d0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80'
+
+
+    menupage.append(menuitem1,menuitem2,menuitem3, menuitem4, menuitem5)
     main.appendChild(menupage)
 }
 
 const menuBtn = document.querySelector('.menu').addEventListener('click', () => {
-    const meuncontent = document.querySelector('.main-body')
+    // const meuncontent = document.querySelector('.main-body')
+    const meuncontent = document.getElementById('main-body')
     while(meuncontent.firstChild) {
         meuncontent.removeChild(meuncontent.firstChild);
     }
