@@ -68,7 +68,6 @@ const menuBtn = document.querySelector('.menu').addEventListener('click', () => 
     const meuncontent = document.querySelector('.main-body')
     while(meuncontent.firstChild) {
         meuncontent.removeChild(meuncontent.firstChild);
-        // meuncontent.remove(meuncontent)
     }
     newMenu()
 });

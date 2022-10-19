@@ -171,7 +171,3 @@ function loadPage() {
 
 loadPage()
 
-// export {
-//     funcMain
-// }
-
