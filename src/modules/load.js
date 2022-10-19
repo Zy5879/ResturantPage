@@ -1,4 +1,5 @@
 const content = document.getElementById('content')
+// import {createMenu} from './menu'
 
 function navHeader() {
     const nav = document.createElement('nav')
@@ -72,19 +73,52 @@ function menuNav() {
     const menuNav = document.createElement('nav');
     menuNav.classList.add('menu-nav')
     const menul = document.createElement('ul')
-    const listArray = ['Home','Menu','Contact']
-    listArray.forEach(function(item) {
-        const menuli = document.createElement('li')
-      const menua = document.createElement('a')
-      menua.href =" "
-      const menuspan = document.createElement('span')
-      const text = document.createTextNode(item)
-      menua.append(menuspan,text)
-      menuli.appendChild(menua)
-      menul.appendChild(menuli)
-    })
+    const menuli = document.createElement('li')
+    const menuli2 = document.createElement('li')
+    const menuli3 = document.createElement('li')
+
+    const menuhome = document.createElement('a')
+    menuhome.classList.add('home')
+    menuhome.textContent = 'Home'
+    const menuMenu = document.createElement('a')
+    menuMenu.classList.add('menu')
+    menuMenu.textContent = 'Menu'
+    const menucontact = document.createElement('a')
+    menucontact.classList.add('contact')
+    menucontact.textContent = 'Contact'
+
+    menuli.append(menuhome)
+    menuli2.append(menuMenu)
+    menuli3.append(menucontact)
+
+    menul.append(menuli,menuli2,menuli3)
+
+
+    // const listArray = ['Home','Menu','Contact']
+    // listArray.forEach(function(item) {
+    //   const menuli = document.createElement('li')
+    //   const menua = document.createElement('a')
+    //   menua.href =" ";
+    //   const menuspan = document.createElement('span')
+    //   const text = document.createTextNode(item)
+    //   menua.append(menuspan,text)
+    //   menuli.appendChild(menua)
+    //   menul.appendChild(menuli)
+    // })
+
     menuNav.appendChild(menul)
     document.body.appendChild(menuNav)
 }
 
-export {navHeader, mainBody, footer, clickToggle, menuNav}
+function loadPage() {
+    navHeader()
+    mainBody()
+    footer()
+    clickToggle()
+    menuNav()
+}
+
+loadPage();
+
+
+// export {navHeader, mainBody, footer, clickToggle, menuNav}

@@ -7,11 +7,13 @@
 // backGround()
 // createTitle()
 
-import {navHeader, mainBody, footer, clickToggle, menuNav} from './modules/load'
+// import {navHeader, mainBody, footer, clickToggle, menuNav} from './modules/load'
+import './modules/load.js'
 import './style.css'
+import './modules/menu'
+// navHeader()
+// mainBody()
+// footer()
+// clickToggle()
+// menuNav()
 
-navHeader()
-mainBody()
-footer()
-clickToggle()
-menuNav()
