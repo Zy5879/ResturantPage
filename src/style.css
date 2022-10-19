@@ -264,6 +264,12 @@ body {
    grid-gap: 20px;
  }
 
+ .contact {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+ }
+
  .menulist img {
    /* display: grid;
    justify-content: center;
@@ -289,4 +295,12 @@ body {
 
  .credit {
    text-align: center;
+ }
+
+ .home {
+   border-right: 2px solid black;
+ }
+
+ .menu {
+   border-right: 2px solid black;
  }
