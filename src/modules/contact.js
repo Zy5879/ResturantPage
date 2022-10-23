@@ -1,4 +1,4 @@
-const main = document.getElementById('main-body')
+const overlay = document.querySelector('.overlay')
 
 function contactInfo() {
     const contactinfo = document.createElement('div')
@@ -23,12 +23,11 @@ function contactInfo() {
     email.appendChild(gmail)
 
     contactinfo.append(address,phone,email)
-    main.appendChild(contactinfo)
+    overlay.appendChild(contactinfo)
 }
 
-const contactBtn = document.querySelector('.contact').addEventListener('click', () => {
-    const contactcontent = document.getElementById('main-body')
-    // contactcontent.classList.add('flex')
+const contactBtn = document.querySelector('.reach').addEventListener('click', () => {
+    const contactcontent = document.querySelector('.overlay')
     while(contactcontent.firstChild) {
         contactcontent.removeChild(contactcontent.firstChild);
     }
